@@ -1,0 +1,5 @@
+OJTs, GECs and online trainings due by class
+Being able to group by employee
+Being able to group by supervisor
+Compare on a weekly basis if training was completed
+Have a color scale from yellow to red to signify due, due soon and overdue trainings
