@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block nav %}
+<a href="{{url_for('pages.manual')}}">Manual</a>
+<a href="{{url_for('pages.automatic')}}">Automatic</a>
+<a class = "active" href="{{url_for('pages._help')}}">Help</a>
+{% endblock nav %}
+
+{% block content %}
+    <div class="help-container">
+        <p>Brotha</p>
+
+    </div>
+{% endblock content %}

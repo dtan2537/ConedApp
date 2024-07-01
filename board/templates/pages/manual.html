@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block nav %}
+<a class = "active" href="{{url_for('pages.manual')}}"">Manual</a>
+<a href="{{url_for('pages.automatic')}}">Automatic</a>
+<a href="{{url_for('pages._help')}}">Help</a>
+{% endblock nav %}
+
+{% block content %}
+<div class="left">
+    <form action = "/manual" method = "post" enctype="multipart/form-data">
+        <p>Upload Training Data</p>
+        <input type="file" name="file">
+        <p> {{data}}</p>
+        
+        <p>Filter Courses</p>
+        <input type="checkbox" id="OJT" name="OJT" value="OJT">
+        <label for="OJT">OJT</label><br>
+        <input type="checkbox" id="GEC" name="GEC" value="GEC">
+        <label for="GEC">GEC</label><br>
+        <input type="checkbox" id="ONL" name="ONL" value="ONL">
+        <label for="ONL">ONL</label><br>
+        <input type="checkbox" id="other" name="other" value="other">
+        <label for="other">other</label><br><br>
+
+        <label for="sort">Group By</label>
+        <select name="sort" id="sort">
+            <option value="Employee">Employee</option>
+            <option value="Supervisor">Supervisor</option>
+            <option value="Course">Course</option>
+            <option value="Due">Due</option>
+        </select>
+
+        <input type="submit" value="Preview">
+    </form>
+</div>
+<div class="right">
+    <table>
+        <thead>
+            <tr>
+                <th>Emp No.</th>
+                <th>Name</th>
+                <th>Course ID</th>
+                <th>Course Title</th>
+                <th>Course Status</th>
+                <th>Due on</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in grid %}
+                <tr>
+                    <td>{{row['Emp No']}}</td>
+                    <td>{{row['Employee Name']}}</td>
+                    <td>{{row['Course ID']}}</td>
+                    <td>{{row['Course Title']}}</td>
+                    <td>{{row['Course Status']}}</td>
+                    <td>{{row['Due Date']}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+
+{% endblock content %}

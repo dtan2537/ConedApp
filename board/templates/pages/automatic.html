@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block nav %}
+<a href="{{url_for('pages.manual')}}">Manual</a>
+<a class = "active" href="{{url_for('pages.automatic')}}">Automatic</a>
+<a href="{{url_for('pages._help')}}">Help</a>
+{% endblock nav %}
+
+
+{% block content %}
+<form method="post" action="/" enctype="multipart/form-data"> 
+    <!-- {{ form.csrf_token }}  -->
+    <p>{{ form.name.label }} {{ form.name() }}</p> 
+    <p>{{ form.password.label }} {{ form.password() }}</p> 
+    <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p> 
+    <p>{{ form.salary.label }} {{ form.salary() }}</p> 
+    <p>{{ form.gender.label }} {{ form.gender() }}</p> 
+    <p>{{ form.country.label }} {{ form.country() }}</p> 
+    <p>{{ form.message.label }} {{ form.message() }}</p> 
+    <p>{{ form.photo.label }} {{ form.photo() }}</p> 
+    <p><input type="submit" value="Submit"></p> 
+</form> 
+{% endblock content %}

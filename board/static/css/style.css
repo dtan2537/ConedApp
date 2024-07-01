@@ -1,0 +1,128 @@
+html {
+    font-size: 16px;
+}
+
+.topnav {
+    background-color: #333;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+
+}
+body {
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    overflow: hidden;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.topnav a{
+    float: none;
+    margin: 0;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    zoom: 1;
+}
+
+.topnav a:hover{
+    background-color: #c4eaf9;
+    color: black;
+    margin: 0;
+}
+
+.topnav a.active {
+    background-color: #46a0ff;
+    color: white;
+    margin: 0;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    overflow-y: auto;
+}
+
+.left {
+    margin: 10px;
+    padding: 10px;
+}
+
+.right {
+    width: 100vw;
+    height: 85vh;
+    padding: 10px;
+    margin: 10px;
+    background-color: #fafafa;
+    overflow: auto;
+    border-radius: 1%;
+}
+
+.form {
+    display: block;
+}
+
+input[type="submit"] {
+    display: block;
+    margin: 10px;
+    border: none;
+    background-color: #76b8ff;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 5%;
+    font-size: 1rem;
+}
+input[type="submit"]:hover {
+    background-color: #46a0ff;
+}
+
+select {
+    padding: 5px;
+    font-size: 1rem;
+    border:none;
+    border-bottom: solid;
+    border-color: #666;
+    border-width: 2px;
+}
+
+table {
+    border: 1px solid #ddd;
+    border-collapse: collapse;
+}
+
+td, th {
+    white-space: nowrap;
+    border: 1px solid #ddd;
+    padding: 20px;
+}
+
+th {
+    background-color: #eee;
+}
+
+tbody tr td:first-of-type {
+    background-color: #eee;
+}
+
+
+.help-container {
+    display: flex;
+    background-color: #eee;
+    width: 1000px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    padding: 50px;
+}
+

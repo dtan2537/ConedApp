@@ -1,0 +1,47 @@
+Todo
+
+1. Sohaib instrucitons
+2. Generate email attachments with overdue/due people next to each course number (overdue in red)
+3. Generate email attachment with overdue/ due courses next to each person (overdue in red)
+
+OJTs, GECs and online trainings due by class
+Being able to group by employee
+Being able to group by supervisor
+Compare on a weekly basis if training was completed
+Have a color scale from yellow to red to signify due, due soon and overdue trainings
+
+
+6/26/24:
+- Start on Automatic and Help Tabs
+- contact IT for Employee Spreadsheet
+    - if not, figure out how to get employees on a list/graphic
+- Flesh out Employee Tab Idea
+-Selenium for training data automatic
+
+6/27/24:
+- Manual - compare spreadsheet
+    - flesh out graphics 
+    - expand on excel code
+    - implement it on Manual
+- Help - start developing help page
+- Employee Tab implement
+
+7/1/2024:
+- Buy boots
+- Get Reimbursement
+- Connect pandas to grid
+- filter function
+- groupby function
+- form keep options
+- responsive css (margin and width)
+
+Soon:
+- Contact IT for Employee Spreadsheet?
+- Contact IT for app security??? (not happening)
+
+Future:
+- message flashing
+- field data persisting after submission
+- choose file side text "no chosen file" when chosen file??
+
+
