@@ -35,6 +35,30 @@ Have a color scale from yellow to red to signify due, due soon and overdue train
 - form keep options
 - responsive css (margin and width)
 
+7/2/2024:
+- Ask IT 3 things:
+    - Can I get a new laptop
+    - Can I get access to an employee database
+    - Can I get access for Reimbursement
+- WTForms migrate
+- Create second navbar for three tabs: grid, generate email, compare
+
+7/8/2024:
+- Finish Email page
+    - text view
+    - copy clipboard button (html)
+    - change select function
+    - add color for overdue
+    - create configuration file and start refactoring
+
+7/10/2024:
+    - finish configuration
+    - experiment with bootstrap
+    - compare file handling
+    - try to compare files?
+    - start drafting help
+
+
 Soon:
 - Contact IT for Employee Spreadsheet?
 - Contact IT for app security??? (not happening)
@@ -43,5 +67,13 @@ Future:
 - message flashing
 - field data persisting after submission
 - choose file side text "no chosen file" when chosen file??
+- make scalable (what if spreadsheet changes by one column?)
+- include in help and "advanced" sectoin where json can be changed
+- flash notif on copy
+
+Bugs to fix:
+- compare file handling code
+- update parquet - parquet not being created
+
 
 

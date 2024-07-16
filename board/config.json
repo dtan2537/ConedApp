@@ -1,0 +1,29 @@
+{
+    "grid_columns":["Emp No", "Employee Name", "Course ID", "Course Title", "Course Status", "Due Date"],
+    "color_dict": {"Due": "orange",
+                    "Due Soon": "yellow",
+                    "Overdue": "red",
+                    "Enrolled": "blue",
+                    "Complete": "green",
+                    "Default": "black"},
+    "course_prefix": ["OJT", "GEC", "ONL"],
+    "email_arrangement": {
+        "name - title" : {"parent": "Employee Name",
+                            "child": "Course Title",
+                            "highlight_overdue": true},
+        "title - name": {"parent": "Course Title",
+                            "child": "Employee Name",
+                            "highlight_overdue": true},
+        "ID - name": {"parent": "Course ID",
+                        "child": "Employee Name",
+                        "highlight_overdue": true},
+        "name - ID": {"parent": "Employee Name",
+                        "child": "Course ID",
+                        "highlight_overdue": true}
+    },
+    "Defaults": {
+        "group": "ID - name",
+        "filterby": ["OJT", "GEC", "ONL"],
+        "sort": "Emp No"
+    }
+}

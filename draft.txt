@@ -1,0 +1,12 @@
+Manual
+- mention filters, sorting
+
+
+generate email/compare/generate email tabs
+
+What is this app for?
+    CETA (Con Edison Training App) is an automation app made to simplify training reports into it's most important components.
+    There are three main functionalities:
+
+Spreadsheet
+    

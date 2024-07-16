@@ -1,14 +1,29 @@
 {% extends 'base.html' %}
 
 {% block nav %}
-<a href="{{url_for('pages.manual')}}">Manual</a>
-<a href="{{url_for('pages.automatic')}}">Automatic</a>
+<a href="{{url_for('pages.manual')}}">Sheet</a>
+<a href="{{url_for('pages.automatic')}}">Email</a>
+<a href="{{url_for('pages.compare')}}">Compare</a>
 <a class = "active" href="{{url_for('pages._help')}}">Help</a>
 {% endblock nav %}
 
 {% block content %}
     <div class="help-container">
-        <p>Brotha</p>
-
+        <p>What is this app for?</p>
+        <p>CETA (Con Edison Training App) is an automation app made to simplify training reports into its most important components.</p>
+        <p>There are three tabs on the top: </p>
+        <p>{Insert image of tab bar} </p>
+        <p>And  toolbar on the side: </p>
+        <p>{insert image of sidebar} </p>
+        <p>Sheet - displays a condensed and color coded grid of the spreadsheet uploaded</p>
+        <p>To view this, first upload a spreadsheet of extensions .csv, .xls, or .xlsx (any excel file will do). Click ‘Upload File’ on the sidebar. Select the courses to filter and the column to sort. Select ‘Preview’ to see the changes.</p>
+        <p>Email - displays the same information but grouped by class</p>
+        <p>To change this grouping, select the ‘Group By’ box. The format is {Group - Children}</p>
+        <p>Compare - compares two spreadsheets to identify completed courses</p>
+        <p>Upload two spreadsheets to compare. Select ‘Compare’ to view results.</p>
+        <details>
+            <summary>Advanced</summary>
+            <p>For developers, here is the github repo: https://github.com/dtan2537/ConedApp</p>
+        </details>
     </div>
 {% endblock content %}

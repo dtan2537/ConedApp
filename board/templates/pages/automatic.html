@@ -1,23 +1,37 @@
 {% extends 'base.html' %}
 
 {% block nav %}
-<a href="{{url_for('pages.manual')}}">Manual</a>
-<a class = "active" href="{{url_for('pages.automatic')}}">Automatic</a>
+<a href="{{url_for('pages.manual')}}">Sheet</a>
+<a class = "active" href="{{url_for('pages.automatic')}}">Email</a>
+<a href="{{url_for('pages.compare')}}"">Compare</a>
 <a href="{{url_for('pages._help')}}">Help</a>
 {% endblock nav %}
 
-
 {% block content %}
-<form method="post" action="/" enctype="multipart/form-data"> 
-    <!-- {{ form.csrf_token }}  -->
-    <p>{{ form.name.label }} {{ form.name() }}</p> 
-    <p>{{ form.password.label }} {{ form.password() }}</p> 
-    <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p> 
-    <p>{{ form.salary.label }} {{ form.salary() }}</p> 
-    <p>{{ form.gender.label }} {{ form.gender() }}</p> 
-    <p>{{ form.country.label }} {{ form.country() }}</p> 
-    <p>{{ form.message.label }} {{ form.message() }}</p> 
-    <p>{{ form.photo.label }} {{ form.photo() }}</p> 
-    <p><input type="submit" value="Submit"></p> 
-</form> 
+<div class="left">
+    <form action = "/automatic" method = "post" enctype="multipart/form-data">
+        {{form.csrf_token}}
+        <p>{{ form.file.label }}: {{name}}{{form.file()}}</p> 
+        <label class="file_btn" for={{form.file.id}}>Choose File</label>
+        <p>{{ form.filterby.label}} {{ form.filterby() }}</p>  
+        <p>{{ form.sort.label }} {{ form.sort() }}</p> 
+        <p>{{ form.group.label }} {{ form.group() }}</p>
+        <p>{{ form.submit() }}</p> 
+        <p>{{ form.copy()}}</p>
+    </form>
+    {% for msg in get_flashed_messages() %}
+    <p class="error">{{msg}}</p>
+    {% endfor %}
+</div>
+<div class="right">
+    {% for key in text %}
+        <br><span>{{key}} - </span>
+        {% for item in text[key] %}
+            <span class={{'red' if item[1] == 'Overdue' else ''}}>{{item[0]}}, </span>
+        {% endfor %}
+        <br>
+    {% endfor %}
+</div>
+
+
 {% endblock content %}

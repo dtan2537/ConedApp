@@ -1,60 +1,43 @@
 {% extends 'base.html' %}
 
 {% block nav %}
-<a class = "active" href="{{url_for('pages.manual')}}"">Manual</a>
-<a href="{{url_for('pages.automatic')}}">Automatic</a>
+<a class = "active" href="{{url_for('pages.manual')}}"">Sheet</a>
+<a href="{{url_for('pages.automatic')}}">Email</a>
+<a href="{{url_for('pages.compare')}}">Compare</a>
 <a href="{{url_for('pages._help')}}">Help</a>
 {% endblock nav %}
 
 {% block content %}
 <div class="left">
     <form action = "/manual" method = "post" enctype="multipart/form-data">
-        <p>Upload Training Data</p>
-        <input type="file" name="file">
-        <p> {{data}}</p>
+        {{form.csrf_token}}
+        <p>{{ form.file.label }}: {{name}}{{form.file()}}</p> 
+        <label class="file_btn" for={{form.file.id}}>Choose File</label>
+        <p>{{ form.filterby.label}} {{ form.filterby() }}</p> 
+        <p>{{ form.sort.label }} {{ form.sort() }}</p>
+        <p>{{ form.submit() }}</p>
         
-        <p>Filter Courses</p>
-        <input type="checkbox" id="OJT" name="OJT" value="OJT">
-        <label for="OJT">OJT</label><br>
-        <input type="checkbox" id="GEC" name="GEC" value="GEC">
-        <label for="GEC">GEC</label><br>
-        <input type="checkbox" id="ONL" name="ONL" value="ONL">
-        <label for="ONL">ONL</label><br>
-        <input type="checkbox" id="other" name="other" value="other">
-        <label for="other">other</label><br><br>
-
-        <label for="sort">Group By</label>
-        <select name="sort" id="sort">
-            <option value="Employee">Employee</option>
-            <option value="Supervisor">Supervisor</option>
-            <option value="Course">Course</option>
-            <option value="Due">Due</option>
-        </select>
-
-        <input type="submit" value="Preview">
     </form>
+
+    {% for msg in get_flashed_messages() %}
+    <p class="error">{{msg}}</p>
+    {% endfor %}
 </div>
 <div class="right">
     <table>
         <thead>
             <tr>
-                <th>Emp No.</th>
-                <th>Name</th>
-                <th>Course ID</th>
-                <th>Course Title</th>
-                <th>Course Status</th>
-                <th>Due on</th>
+                {% for i in grid[0] %}
+                    <th> {{i}}</th>
+                {% endfor %}
             </tr>
         </thead>
         <tbody>
             {% for row in grid %}
                 <tr>
-                    <td>{{row['Emp No']}}</td>
-                    <td>{{row['Employee Name']}}</td>
-                    <td>{{row['Course ID']}}</td>
-                    <td>{{row['Course Title']}}</td>
-                    <td>{{row['Course Status']}}</td>
-                    <td>{{row['Due Date']}}</td>
+                    {% for i in row %}
+                    <td class={{color.get(row.get(i), color['Default'])}}>{{row.get(i)}}</td>
+                    {% endfor %}
                 </tr>
             {% endfor %}
         </tbody>
@@ -63,3 +46,5 @@
 
 
 {% endblock content %}
+
+
