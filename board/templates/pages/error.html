@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+
+{% block nav %}
+<a href="{{url_for('manual')}}">Sheet</a>
+<a href="{{url_for('automatic')}}">Email</a>
+<a href="{{url_for('compare')}}">Compare</a>
+<a href="{{url_for('supervisors')}}">Supervisors</a>
+<a href="{{url_for('_help')}}">Help</a>
+{% endblock nav %}
+
+
+{% block content %}
+<div class="error-container">
+    <div class="error-name">Error: {{e}}</div>
+    <div class="error-instructions">Incorrect file format. Please try again.</div>
+</div>
+
+
+{% endblock content %}

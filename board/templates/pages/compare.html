@@ -1,10 +1,11 @@
 {% extends 'base.html' %}
 
 {% block nav %}
-<a href="{{url_for('pages.manual')}}">Sheet</a>
-<a href="{{url_for('pages.automatic')}}">Email</a>
-<a class = "active" href="{{url_for('pages.compare')}}">Compare</a>
-<a href="{{url_for('pages._help')}}">Help</a>
+<a href="{{url_for('manual')}}">Sheet</a>
+<a href="{{url_for('automatic')}}">Email</a>
+<a class = "active" href="{{url_for('compare')}}">Compare</a>
+<a href="{{url_for('supervisors')}}">Supervisors</a>
+<a href="{{url_for('_help')}}">Help</a>
 {% endblock nav %}
 
 
@@ -12,21 +13,55 @@
 <div class="left">
     <form action = "/compare" method = "post" enctype="multipart/form-data">
         {{form.csrf_token}}
-        <p>{{ form.file1.label }} {{ form.file1() }}</p> 
-        <label class="file_btn" for={{form.file1.id}}>Choose File</label>
-        <p>{{ form.file2.label }} {{ form.file2() }}</p> 
-        <label class="file_btn" for={{form.file2.id}}>Choose File</label>
-        <p>{{ form.filterby.label}} {{ form.filterby() }}</p>  
-        <p>{{ form.sort.label }} {{ form.sort() }}</p> 
-        <p>{{ form.compare() }}</p> 
+        <p>Week 1: {{name1}}</p>
+        <p class="button">{{form.file1()}}</p> 
+        <p>Week 2: {{name2}}</p>
+        <p class="button">{{ form.file2() }}</p> 
+        <label>Filter By</label>
+        <details>
+            <summary>Course</summary>
+            <p>{{ form.filterby() }}</p> 
+        </details>
+        <details>
+            <summary>Supervisor</summary>
+            <p> {{ form.filter_super() }}</p> 
+        </details> 
+        <p>{{ form.sort.label }} {{ form.sort() }}</p>
+        <p>{{form.comp_status.label}} {{form.comp_status()}}</p> 
+        <p class="button">{{ form.compare(onClick="disable") }}</p> 
     </form>
     {% for msg in get_flashed_messages() %}
     <p class="error">{{msg}}</p>
     {% endfor %}
 </div>
 <div class="right">
-    <p>Summary (completed, incomplete form last week, newly incomplete)</p>
+    <table>
+        <thead>
+            <tr>
+                {% for i in grid[0] %}
+                    <th> {{i}}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in grid %}
+                <tr>
+                    {% for i in row %}
+                    <td class={{color.get(row.get(i), color['Default'])}}>{{row.get(i)}}</td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 </div>
 
 
 {% endblock content %}
+
+{% block scripts %}
+<script>
+    function disable() {
+        // document.getElementById("compare").disabled = true;
+    }
+</script>
+{% endblock scripts %}

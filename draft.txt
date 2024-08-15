@@ -10,3 +10,6 @@ What is this app for?
 
 Spreadsheet
     
+
+possibly talk about hidden instance of excel and how to deal with it
+

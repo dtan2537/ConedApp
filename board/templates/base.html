@@ -3,18 +3,325 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content='width=device-width, initial-scale=1.0'>
-        <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
         <title>Con Edison Training Page</title>
+        <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+        <link rel="icon" type="image/x-icon" href="{{icon}}">    
+    
+    <style>
+        html {
+            font-size: 16px;
+            color: white;
+        }
+
+        body {
+            padding: 0;
+            margin: 0;
+            overflow: auto;
+            list-style-type: none;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            background: #fbfbff
+        }
+
+
+        .topnav {
+            background-color: #222;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            position: fixed;
+            width: 100%;
+            top: 0;
+        }
+
+        .topnav a{
+            float: none;
+            margin: 0;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: 0.15s;
+        }
+
+        .topnav a:hover{
+            background-color: #76b8ff;
+        }
+
+        .topnav a.active {
+            background-color: #46a0ff;
+        }
+
+        main {
+            display: flex;
+            margin-top: 46px;
+        }
+
+        .left {
+            background-color: #333;
+            margin: 0px;
+            width: 200px;
+            display: inline-block;
+            overflow-x: hidden;
+            overflow-y: auto;
+            position: fixed;
+            top: 46px;
+            bottom: 0;
+            padding: 20px 20px;
+            transition: 0.5s ease;
+
+        }
+        .test {
+            /* display: inline-block;
+            text-align: center;
+            background-color: white;
+            font-size: 50px;
+            line-height: 25px;
+            padding: 5px; */
+            display: flex;
+            align-items: center;
+        }
+
+        .left p {
+            /* white-space: nowrap; */
+            margin: 10px;
+        }
+
+        .left #arrows {
+            font-size: 40px;
+            color: rgb(146, 157, 183);
+            padding: 10px;
+            margin: 0;
+            height: 10px;
+        }
+
+        .left #arrows:hover {
+            background-color: black;
+        }
+
+        .right {
+            color: #333;
+            width: 100vw;
+            padding: 20px;
+            margin-top: 0px;
+            overflow: auto;
+            display: inline-block;
+            transition: 0.5s ease;
+            margin-left: 240px;
+        }
+
+        .form {
+            display: block;
+        }
+
+        details {   
+            cursor: pointer;
+            padding: 10px;
+            background-color: rgb(89, 112, 205);
+            margin: 5px;
+            border-radius: 0.2em;
+        }
+
+        details:hover {
+            background-color: rgb(115, 132, 201);
+        }
+
+        input[type="submit"], input[type="file"]::file-selector-button {
+            display: block;
+            margin: 10px;
+            border: none;
+            background-color: #73a9e2;
+            color: white;
+            padding: 10px 15px;
+            border-radius: .2em;
+            font-size: .9rem;
+            cursor: pointer;
+            transition: 0.15s ease;    
+        }
+        input[type="file"]::file-selector-button {
+            margin-left:0px;
+        }
+        input[type="file"] {
+            max-width: 140px;
+            margin-bottom: 5px;
+        }
+
+        input[type="submit"]:hover, input[type="file"]::file-selector-button:hover {
+            background-color: #96c9ff;
+        }
+
+        .button {
+            margin: auto;
+            display: flex;
+            justify-content: center;
+        }
+
+        .collapse {
+            color: red;
+        }
+
+        select {
+            padding: 5px;
+            font-size: 1rem;
+            border:none;
+            border-bottom: solid;
+            border-color: #5169ca;
+            border-width: 2px;
+            border-radius: 5px;
+            background-color: #444;
+            color: white;
+            cursor:pointer;
+
+        }
+
+        select:hover {
+            background-color: #555555;
+        }
+
+        table {
+            border: 1px solid #ddd;
+            border-collapse: collapse;
+        }
+
+        td, th {
+            white-space: nowrap;
+            border: 1px solid #ddd;
+            padding: 15px;
+        }
+
+        th {
+            background-color: #eee;
+        }
+
+        tbody tr td:first-of-type {
+            background-color: #eee;
+        }
+
+
+        ul {
+            list-style: none;
+        }
+
+        .left ul {
+            padding: 10px;
+        }
+
+        .left p {
+        }
+
+        li.tree {
+            width: fit-content;
+            background-color: rgb(150, 215, 237);
+            padding: 5px 10px;
+            margin: 2px;
+            border-radius: 5px;
+        }
+
+        .supervisors {
+            overflow: auto;
+        }
+
+        .help-container {
+            display: block;
+            background-color: #eee;
+            max-width: 800px ;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            padding: 50px;
+            height: auto;
+            color: #333;
+            
+        }
+
+        .error-container {
+            display: block;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            padding: 50px;
+            height: auto;
+        }
+        .error-name {
+            background-color: #46a0ff;
+            padding: 20px;
+
+        }
+        .error-instructions {
+            background-color: #444;
+            padding: 20px;
+        }
+
+        .error {
+            color: rgb(143, 0, 0);
+            background-color: rgb(255, 124, 124);
+            padding: 0.5em;
+            border-radius: 0.5rem;
+        }
+
+        .collapse {
+            background-color: #f3f3f3;
+            padding: 10px;
+            border-radius: 5px;
+            cursor:pointer;
+        }
+
+        .collapse:hover {
+            background-color: #cfcfcf;
+        }
+
+        .arrow {
+            border: solid rgb(95, 95, 95);
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            padding: 3px;
+            transform: rotate(135deg);
+            -webkit-transform: rotate(135deg);
+        }
+
+        .green {
+            color: green;
+        }
+        .red {
+            color: red;
+        }
+        .orange {
+            color: orange;
+        }
+        .yellow {
+            color: rgb(255, 213, 0);
+        }
+        .blue {
+            color: blue;
+        }
+        .purple {
+            color: purple;
+        }
+        .black {
+            color: black;
+        }
+        .indigo {
+            color: indigo;
+        }
+        .brown {
+            color: brown;
+        }
+
+    </style>
     </head>
     <body>
-        <nav>
-            <div class="topnav">
-                {% block nav %}{% endblock nav %}
-            </div>
-        </nav>
+        <div class="topnav">
+            {% block nav %}{% endblock nav %}
+        </div>
         <main>
             {% block content %}{% endblock content %}
         </main>
-        {% block scripts %}{% endblock scripts %}
+            {% block scripts %}{% endblock scripts %}
     </body>
 </html>

@@ -1,0 +1,468 @@
+{
+  "nest": {
+    "Antonis Hellen": {
+      "id": "",
+      "role": "",
+      "directs": {
+        "Sohaib Marie": {
+          "id": "0036305",
+          "role": "Area Manager",
+          "directs": {
+            "Darren Tan": {
+              "id": "0038334",
+              "role": "Computer Aide Temporary",
+              "directs": {}
+            },
+            "Darnell Stanley": {
+              "id": "0016158",
+              "role": "Field Operations Planner",
+              "directs": {
+                "Vivian Boyd": {
+                  "id": "0035959",
+                  "role": "Supervisor",
+                  "directs": {
+                    "Brian Ramkissoon": {
+                      "id": "0044113",
+                      "role": "General Utility Worker L1-2",
+                      "directs": {}
+                    },
+                    "Thomas McEnery": {
+                      "id": "0020020",
+                      "role": "Mechanic A L1-2",
+                      "directs": {}
+                    },
+                    "Katherine Kowalski": {
+                      "id": "0047481",
+                      "role": "General Utility Worker L1-2",
+                      "directs": {}
+                    },
+                    "Francesco Izzo": {
+                      "id": "0029250",
+                      "role": "Mechanic A L1-2",
+                      "directs": {}
+                    },
+                    "Darien Herrera": {
+                      "id": "0046828",
+                      "role": "General Utility Worker L1-2",
+                      "directs": {}
+                    },
+                    "Cheyenne Gordon": {
+                      "id": "0046883",
+                      "role": "General Utility Worker L1-2",
+                      "directs": {}
+                    },
+                    "Jonathan Carter": {
+                      "id": "0003222",
+                      "role": "Mechanic A L1-2",
+                      "directs": {}
+                    }
+                  }
+                }
+              }
+            },
+            "John Sheridan": {
+              "id": "0023850",
+              "role": "Supervisor",
+              "directs": {
+                "Joseph Sansone Jr": {
+                  "id": "0027609",
+                  "role": "Mechanic A L1-2",
+                  "directs": {}
+                },
+                "Denis Holmes": {
+                  "id": "0045203",
+                  "role": "General Utility Worker L1-2",
+                  "directs": {}
+                },
+                "Kalena Grey": {
+                  "id": "0040323",
+                  "role": "Mechanic B L1-2",
+                  "directs": {}
+                },
+                "Jeffrey Danne": {
+                  "id": "0019792",
+                  "role": "Mechanic A L1-2",
+                  "directs": {}
+                },
+                "Janer Bigio": {
+                  "id": "0003184",
+                  "role": "Mechanic A L1-2",
+                  "directs": {}
+                },
+                "Ndrec Berisha": {
+                  "id": "0041354",
+                  "role": "Mechanic B L1-2",
+                  "directs": {}
+                }
+              }
+            },
+            "Ghansham Seeloch": {
+              "id": "0021124",
+              "role": "Supervisor",
+              "directs": {
+                "Robert Wright": {
+                  "id": "0021128",
+                  "role": "Mechanic A L1-2",
+                  "directs": {}
+                },
+                "Kimberly Valenciano": {
+                  "id": "0003252",
+                  "role": "Engineering Inspector L1-2",
+                  "directs": {}
+                },
+                "Jaime Stams": {
+                  "id": "0007277",
+                  "role": "Mechanic A L1-2",
+                  "directs": {}
+                },
+                "Kindel James": {
+                  "id": "0039325",
+                  "role": "Mechanic B L1-2",
+                  "directs": {}
+                },
+                "Kevin James": {
+                  "id": "0039529",
+                  "role": "Mechanic B L1-2",
+                  "directs": {}
+                },
+                "Kevin Garcia": {
+                  "id": "0022854",
+                  "role": "Engineering Inspector L1-2",
+                  "directs": {}
+                },
+                "Karlos Diaz": {
+                  "id": "0019166",
+                  "role": "Mechanic A L1-2",
+                  "directs": {}
+                }
+              }
+            },
+            "Ruben Ronda": {
+              "id": "0006177",
+              "role": "Supervisor",
+              "directs": {
+                "Justin Valdez": {
+                  "id": "0043982",
+                  "role": "General Utility Worker L1-2",
+                  "directs": {}
+                },
+                "Angela Patterson": {
+                  "id": "0043155",
+                  "role": "General Utility Worker L1-2",
+                  "directs": {}
+                },
+                "Patrick Neilis": {
+                  "id": "0034033",
+                  "role": "Mechanic A L1-2",
+                  "directs": {}
+                },
+                "Connor McGowan": {
+                  "id": "0030214",
+                  "role": "Mechanic A L1-2",
+                  "directs": {}
+                },
+                "Elvin Gomez": {
+                  "id": "0039244",
+                  "role": "Mechanic A L1-2",
+                  "directs": {}
+                },
+                "George Dragu": {
+                  "id": "0046878",
+                  "role": "General Utility Worker L1-2",
+                  "directs": {}
+                },
+                "Ardranae Byer": {
+                  "id": "0001819",
+                  "role": "Engineering Inspector X L1-2",
+                  "directs": {}
+                }
+              }
+            },
+            "Urani Laurent": {
+              "id": "0032368",
+              "role": "Supervisor",
+              "directs": {
+                "Brandon Phillip": {
+                  "id": "0043981",
+                  "role": "General Utility Worker L1-2",
+                  "directs": {}
+                },
+                "David O'Connell": {
+                  "id": "0037099",
+                  "role": "General Utility Worker L1-2",
+                  "directs": {}
+                },
+                "Lawrence Nefsey": {
+                  "id": "0003640",
+                  "role": "Mechanic A L1-2",
+                  "directs": {}
+                },
+                "Kevin Gavilanes": {
+                  "id": "0046170",
+                  "role": "General Utility Worker L1-2",
+                  "directs": {}
+                },
+                "Rodney Bruff": {
+                  "id": "0021576",
+                  "role": "Mechanic A L1-2",
+                  "directs": {}
+                }
+              }
+            },
+            "Syed Hossain": {
+              "id": "0086443",
+              "role": "Supervisor",
+              "directs": {
+                "Derrick Scott": {
+                  "id": "0015620",
+                  "role": "Mechanic A L1-2",
+                  "directs": {}
+                },
+                "Abraham Reyes": {
+                  "id": "0021125",
+                  "role": "Mechanic A L1-2",
+                  "directs": {}
+                },
+                "Angelo Morales": {
+                  "id": "0045015",
+                  "role": "General Utility Worker L1-2",
+                  "directs": {}
+                },
+                "Joseph Lopez": {
+                  "id": "0003266",
+                  "role": "Engineering Inspector L1-2",
+                  "directs": {}
+                },
+                "Colin Grey": {
+                  "id": "0040319",
+                  "role": "Mechanic B L1-2",
+                  "directs": {}
+                }
+              }
+            },
+            "Fernando Cordero": {
+              "id": "0001822",
+              "role": "Field Operations Planner",
+              "directs": {
+                "Marco Narciso": {
+                  "id": "0045655",
+                  "role": "Supervisor",
+                  "directs": {
+                    "Brenden Varrassi": {
+                      "id": "0038797",
+                      "role": "General Utility Worker L1-2",
+                      "directs": {}
+                    },
+                    "Robert Salmon": {
+                      "id": "0023663",
+                      "role": "General Utility Worker L1-2",
+                      "directs": {}
+                    },
+                    "Gregory Ortega": {
+                      "id": "0039528",
+                      "role": "Mechanic B L1-2",
+                      "directs": {}
+                    },
+                    "Giuseppe Modena": {
+                      "id": "0043159",
+                      "role": "General Utility Worker L1-2",
+                      "directs": {}
+                    },
+                    "Louis Mastrocola": {
+                      "id": "0003246",
+                      "role": "Mechanic A L1-2",
+                      "directs": {}
+                    },
+                    "Anthony Damiani": {
+                      "id": "0043977",
+                      "role": "General Utility Worker L1-2",
+                      "directs": {}
+                    },
+                    "Christopher Bishun": {
+                      "id": "0017371",
+                      "role": "Mechanic B L1-2",
+                      "directs": {}
+                    },
+                    "Ray Belfon-Nixon": {
+                      "id": "0040152",
+                      "role": "Mechanic B L1-2",
+                      "directs": {}
+                    }
+                  }
+                },
+                "Jason Cruz": {
+                  "id": "0046843",
+                  "role": "Supervisor",
+                  "directs": {
+                    "Arthur Whitten": {
+                      "id": "0016603",
+                      "role": "Mechanic A L1-2",
+                      "directs": {}
+                    },
+                    "Iris Urbaez": {
+                      "id": "0004542",
+                      "role": "Mechanic A L1-2",
+                      "directs": {}
+                    },
+                    "Francis Sherwood": {
+                      "id": "0043183",
+                      "role": "General Utility Worker L1-2",
+                      "directs": {}
+                    },
+                    "Jermaine Nipper": {
+                      "id": "0010552",
+                      "role": "Mechanic A L1-2",
+                      "directs": {}
+                    },
+                    "Austin Misischia": {
+                      "id": "0033963",
+                      "role": "Mechanic A L1-2",
+                      "directs": {}
+                    },
+                    "Derrick Johns": {
+                      "id": "0018032",
+                      "role": "Mechanic A L1-2",
+                      "directs": {}
+                    },
+                    "Peter Jacoviello": {
+                      "id": "0008469",
+                      "role": "Engineering Inspector L1-2",
+                      "directs": {}
+                    },
+                    "Joshua Escobar": {
+                      "id": "0041469",
+                      "role": "Mechanic B L1-2",
+                      "directs": {}
+                    },
+                    "Robert Casalaspro": {
+                      "id": "0044098",
+                      "role": "General Utility Worker L1-2",
+                      "directs": {}
+                    },
+                    "Ayoob Alahwas": {
+                      "id": "0044089",
+                      "role": "General Utility Worker L1-2",
+                      "directs": {}
+                    }
+                  }
+                }
+              }
+            },
+            "Eric Constantino": {
+              "id": "0038274",
+              "role": "Supervisor",
+              "directs": {}
+            },
+            "Kirk Balgobin": {
+              "id": "0031069",
+              "role": "Supervisor",
+              "directs": {
+                "Kelvin Rodriguez": {
+                  "id": "0039532",
+                  "role": "Mechanic B L1-2",
+                  "directs": {}
+                },
+                "Tiara Parkinson": {
+                  "id": "0042188",
+                  "role": "Mechanic B L1-2",
+                  "directs": {}
+                },
+                "Andre Lawson": {
+                  "id": "0030977",
+                  "role": "Mechanic A L1-2",
+                  "directs": {}
+                },
+                "Maurice Baker": {
+                  "id": "0043754",
+                  "role": "General Utility Worker L1-2",
+                  "directs": {}
+                }
+              }
+            },
+            "Jason Bain": {
+              "id": "0034183",
+              "role": "Supervisor",
+              "directs": {}
+            }
+          }
+        }
+      }
+    }
+  },
+  "list": {
+    "36305": "Antonis Hellen",
+    "34183": "Sohaib Marie",
+    "31069": "Sohaib Marie",
+    "38274": "Sohaib Marie",
+    "1822": "Sohaib Marie",
+    "86443": "Sohaib Marie",
+    "32368": "Sohaib Marie",
+    "6177": "Sohaib Marie",
+    "21124": "Sohaib Marie",
+    "23850": "Sohaib Marie",
+    "16158": "Sohaib Marie",
+    "38334": "Sohaib Marie",
+    "43754": "Kirk Balgobin",
+    "30977": "Kirk Balgobin",
+    "42188": "Kirk Balgobin",
+    "39532": "Kirk Balgobin",
+    "46843": "Fernando Cordero",
+    "45655": "Fernando Cordero",
+    "40319": "Syed Hossain",
+    "3266": "Syed Hossain",
+    "45015": "Syed Hossain",
+    "21125": "Syed Hossain",
+    "15620": "Syed Hossain",
+    "21576": "Urani Laurent",
+    "46170": "Urani Laurent",
+    "3640": "Urani Laurent",
+    "37099": "Urani Laurent",
+    "43981": "Urani Laurent",
+    "1819": "Ruben Ronda",
+    "46878": "Ruben Ronda",
+    "39244": "Ruben Ronda",
+    "30214": "Ruben Ronda",
+    "34033": "Ruben Ronda",
+    "43155": "Ruben Ronda",
+    "43982": "Ruben Ronda",
+    "19166": "Ghansham Seeloch",
+    "22854": "Ghansham Seeloch",
+    "39529": "Ghansham Seeloch",
+    "39325": "Ghansham Seeloch",
+    "7277": "Ghansham Seeloch",
+    "3252": "Ghansham Seeloch",
+    "21128": "Ghansham Seeloch",
+    "41354": "John Sheridan",
+    "3184": "John Sheridan",
+    "19792": "John Sheridan",
+    "40323": "John Sheridan",
+    "45203": "John Sheridan",
+    "27609": "John Sheridan",
+    "35959": "Darnell Stanley",
+    "3222": "Vivian Boyd",
+    "46883": "Vivian Boyd",
+    "46828": "Vivian Boyd",
+    "29250": "Vivian Boyd",
+    "47481": "Vivian Boyd",
+    "20020": "Vivian Boyd",
+    "44113": "Vivian Boyd",
+    "44089": "Jason Cruz",
+    "44098": "Jason Cruz",
+    "41469": "Jason Cruz",
+    "8469": "Jason Cruz",
+    "18032": "Jason Cruz",
+    "33963": "Jason Cruz",
+    "10552": "Jason Cruz",
+    "43183": "Jason Cruz",
+    "4542": "Jason Cruz",
+    "16603": "Jason Cruz",
+    "40152": "Marco Narciso",
+    "17371": "Marco Narciso",
+    "43977": "Marco Narciso",
+    "3246": "Marco Narciso",
+    "43159": "Marco Narciso",
+    "39528": "Marco Narciso",
+    "23663": "Marco Narciso",
+    "38797": "Marco Narciso"
+  }
+}

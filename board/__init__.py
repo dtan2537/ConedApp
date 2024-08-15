@@ -1,14 +1,18 @@
 from flask import Flask
 import os
-from board import pages
-from flask_bootstrap import Bootstrap
+import sys
 
-def create_app():
-    app = Flask(__name__)
-
-    app.register_blueprint(pages.bp)
+class Config:
     SECRET_KEY = os.urandom(32)
-    app.config['SECRET_KEY'] = SECRET_KEY
-    # bootstrap = Bootstrap()
-    # bootstrap.init_app(app)
-    return app
+    SESSION_PERMANENT = False
+    SESSION_TYPE = "filesystem"
+
+def resource_path(relative_path):
+    """ Get absolute path to resource, works for dev and for PyInstaller """
+    base_path = getattr(sys, '_MEIPASS', os.path.dirname(os.path.abspath(__file__)))
+    return os.path.join(base_path, relative_path)
+
+app = Flask(__name__, template_folder = resource_path("templates"))  
+app.config.from_object(Config)
+
+from board import pages

@@ -1,25 +1,29 @@
 html {
     font-size: 16px;
+    color: white;
 }
 
+body {
+    padding: 0;
+    margin: 0;
+    overflow: auto;
+    list-style-type: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: #fbfbff
+}
+
+
 .topnav {
-    background-color: #333;
+    background-color: #222;
     text-align: center;
     align-items: center;
     justify-content: center;
     margin: 0;
     padding: 0;
     display: flex;
-
-}
-body {
-    padding: 0;
-    margin: 0;
-    width: 100vw;
-    display: block;
-    overflow: auto;
-    list-style-type: none;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    position: fixed;
+    width: 100%;
+    top: 0;
 }
 
 .topnav a{
@@ -30,66 +34,123 @@ body {
     padding: 14px 16px;
     text-decoration: none;
     font-size: 1rem;
-    zoom: 1;
+    transition: 0.15s;
 }
 
 .topnav a:hover{
-    background-color: #c4eaf9;
-    color: black;
-    margin: 0;
+    background-color: #76b8ff;
 }
 
 .topnav a.active {
     background-color: #46a0ff;
-    color: white;
-    margin: 0;
 }
 
 main {
-    width: 100vw;
-    height: auto;
     display: flex;
-    overflow-y: auto;
-    overflow-x: auto;
+    margin-top: 46px;
 }
 
 .left {
+    background-color: #333;
+    margin: 0px;
+    width: 200px;
+    display: inline-block;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: fixed;
+    top: 46px;
+    bottom: 0;
+    padding: 20px 20px;
+    transition: 0.5s ease;
+
+}
+.test {
+    /* display: inline-block;
+    text-align: center;
+    background-color: white;
+    font-size: 50px;
+    line-height: 25px;
+    padding: 5px; */
+    display: flex;
+    align-items: center;
+}
+
+.left p {
+    /* white-space: nowrap; */
     margin: 10px;
+}
+
+.left #arrows {
+    font-size: 40px;
+    color: rgb(146, 157, 183);
     padding: 10px;
+    margin: 0;
+    height: 10px;
+}
+
+.left #arrows:hover {
+    background-color: black;
 }
 
 .right {
+    color: #333;
     width: 100vw;
-    height: 90vh;
-    padding: 10px;
-    margin: 10px;
+    padding: 20px;
     margin-top: 0px;
-    background-color: #fafafa;
     overflow: auto;
-    border-radius: 1%;
+    display: inline-block;
+    transition: 0.5s ease;
+    margin-left: 240px;
 }
 
 .form {
     display: block;
 }
-input[type="file"] {
-    display: none;
+
+details {   
+    cursor: pointer;
+    padding: 10px;
+    background-color: rgb(89, 112, 205);
+    margin: 5px;
+    border-radius: 0.2em;
 }
 
+details:hover {
+    background-color: rgb(115, 132, 201);
+}
 
-input[type="submit"], .file_btn {
+input[type="submit"], input[type="file"]::file-selector-button {
     display: block;
     margin: 10px;
     border: none;
-    background-color: #46a0ff;
+    background-color: #73a9e2;
     color: white;
-    padding: 5px 15px;
-    border-radius: 5%;
-    font-size: 1rem;
+    padding: 10px 15px;
+    border-radius: .2em;
+    font-size: .9rem;
+    cursor: pointer;
+    transition: 0.15s ease;    
 }
-input[type="submit"]:hover, .file_btn:hover {
+input[type="file"]::file-selector-button {
+    margin-left:0px;
+}
+input[type="file"] {
+    max-width: 140px;
+    margin-bottom: 5px;
+}
+
+input[type="submit"]:hover, input[type="file"]::file-selector-button:hover {
     background-color: #96c9ff;
-    
+}
+
+.button {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.collapse {
+    color: red;
 }
 
 select {
@@ -97,8 +158,17 @@ select {
     font-size: 1rem;
     border:none;
     border-bottom: solid;
-    border-color: #666;
+    border-color: #5169ca;
     border-width: 2px;
+    border-radius: 5px;
+    background-color: #444;
+    color: white;
+    cursor:pointer;
+
+}
+
+select:hover {
+    background-color: #555555;
 }
 
 table {
@@ -121,6 +191,29 @@ tbody tr td:first-of-type {
 }
 
 
+ul {
+    list-style: none;
+}
+
+.left ul {
+    padding: 10px;
+}
+
+.left p {
+}
+
+li.tree {
+    width: fit-content;
+    background-color: rgb(150, 215, 237);
+    padding: 5px 10px;
+    margin: 2px;
+    border-radius: 5px;
+}
+
+.supervisors {
+    overflow: auto;
+}
+
 .help-container {
     display: block;
     background-color: #eee;
@@ -131,7 +224,28 @@ tbody tr td:first-of-type {
     margin-bottom: 50px;
     padding: 50px;
     height: auto;
+    color: #333;
     
+}
+
+.error-container {
+    display: block;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 50px;
+    height: auto;
+}
+.error-name {
+    background-color: #46a0ff;
+    padding: 20px;
+
+}
+.error-instructions {
+    background-color: #444;
+    padding: 20px;
 }
 
 .error {
@@ -141,6 +255,25 @@ tbody tr td:first-of-type {
     border-radius: 0.5rem;
 }
 
+.collapse {
+    background-color: #f3f3f3;
+    padding: 10px;
+    border-radius: 5px;
+    cursor:pointer;
+}
+
+.collapse:hover {
+    background-color: #cfcfcf;
+}
+
+.arrow {
+    border: solid rgb(95, 95, 95);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+  }
 
 .green {
     color: green;

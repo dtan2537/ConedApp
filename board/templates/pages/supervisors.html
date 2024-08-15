@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+
+{% block nav %}
+<a href="{{url_for('manual')}}">Sheet</a>
+<a href="{{url_for('automatic')}}">Email</a>
+<a href="{{url_for('compare')}}">Compare</a>
+<a class = "active" href="{{url_for('supervisors')}}">Supervisors</a>
+<a href="{{url_for('_help')}}">Help</a>
+{% endblock nav %}
+
+
+{% block content %}
+<div class="left" id="left">
+    <form action = "/supervisors" method = "post" enctype="multipart/form-data">
+        {{form.csrf_token}}
+        <p>{{form.file.label}}</p>
+        <p>{{name}}</p>
+        <p class="button">{{form.file()}}</p>
+        <p class="button">{{form.submit()}}</p>
+        {% for msg in get_flashed_messages() %}
+            <p class="error">{{msg}}</p>
+        {% endfor %}
+    </form>
+</div>
+<div class="right" id="right">
+    <div id="supervisors"></div>
+</div>
+{% endblock content %}
+
+{% block scripts %}
+<script>
+    let supervisor = JSON.parse('{{supervisors | tojson}}');
+    function recurse_dict(dict) {
+        if (Object.keys(dict).length === 0) {
+            return ""
+        }
+        let _string = "";
+        for (name in dict) {
+            _string = _string + "<li class='tree'>" + name + "</li>" + recurse_dict(dict[name]['directs'])
+        }
+        return "<ul>" + _string + "</ul>"
+    }
+    let list = recurse_dict(supervisor)
+    console.log(list)
+    document.getElementById("supervisors").innerHTML = list
+
+    function openNav() {
+        document.getElementById("left").style.width = "230px";
+        document.getElementById("right").style.marginLeft = "230px";
+        document.getElementById("left").style.padding = "0px";
+    }
+
+    function closeNav() {
+        document.getElementById("left").style.width = "0";
+        document.getElementById("left").style.padding = "0px 0px";
+        document.getElementById("right").style.marginLeft= "0";
+    }
+    // create function to recurse 
+    // alert("yuh");
+</script>
+{% endblock scripts %}

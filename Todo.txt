@@ -58,6 +58,44 @@ Have a color scale from yellow to red to signify due, due soon and overdue train
     - try to compare files?
     - start drafting help
 
+7/11/2024:
+    - check for more config opportunities (defaults?)
+    - compare functionality
+    - Flash/ error handling
+
+7/17/2024:
+    - Add Supervisors as filter command
+    - debug merge
+    - explore selenium
+
+7/18/2024:
+    - Add more tabs for supervisor relationship and config.json editing
+    - Remove parquet and use global variables for pandas dataframe
+    - Figure out merge errors?
+    - 
+
+7/19/2024: absolute musts only
+    - figure out merging situation
+    - get rid of all parquet refs
+    - fix flashing
+
+7/24/2024:
+    - Fix merge to only show newly_complete (confirm with ui once more that it works)
+    - Add supervisor tab and connect it to a json
+    - Finish up help page
+
+7/21-22/2024:
+    - Export and debug all folder issues
+    - comment on code and clean up for future development (variables/ structure)
+
+Aesthetics:
+- toggle sidebar and sticky sidebar
+- color theme?
+- hoverable directory tree with lines and collapsible?
+- Instructions (hoverable help?) for each page have a question mark
+
+
+
 
 Soon:
 - Contact IT for Employee Spreadsheet?
@@ -74,6 +112,53 @@ Future:
 Bugs to fix:
 - compare file handling code
 - update parquet - parquet not being created
+- 
+
+
+Brainstorm:
+    - been complete
+    - newly completed
+    - been incomplete
+    - newly incomplete
+
+been - similar course and employee id
+    - complete - course id and employee id and completed
+    - incomplete - course id and employee id and not completed
+newly - different course and cemployee id
+    - complete - 
+    - incomplete - 
+
+
+remove completed from file 1
 
 
 
+filter course status
+consider collapsing
+implement merge
+
+
+add unknown to filter
+
+FINISH SWAPPING OUT COMP_DF
+
+
+
+Error Raising and Handling:
+- json dumps can cause permanent crashes
+- clear json in these cases (and put something in its placeholder; json crashes if nothing is in it)
+- also fix compare
+
+
+-error message page
+-o.visible to true?
+- try except blocks and throw specific errors
+- shutdown and startup events
+- js for email stuff to remove commas
+
+
+- add other course groupings
+- change compare to show overdues that carried over
+- still fixe compare
+- excel closing problem? change/ warn users
+- make sure to filter out overdue from week 1 for  - overdue; u want "not overdue" - overdue

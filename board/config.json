@@ -1,12 +1,13 @@
 {
-    "grid_columns":["Emp No", "Employee Name", "Course ID", "Course Title", "Course Status", "Due Date"],
+    "grid_columns":["Emp No", "Employee Name", "Course ID", "Course Title", "Course Status", "Due Date", "Supervisor"],
     "color_dict": {"Due": "orange",
                     "Due Soon": "yellow",
                     "Overdue": "red",
                     "Enrolled": "blue",
                     "Complete": "green",
                     "Default": "black"},
-    "course_prefix": ["OJT", "GEC", "ONL"],
+    "course_prefix": ["OJT", "GEC", "ONL", "SAF", "CSG", "CSO", "ODI", "SBC", "SBS"],
+    "statuses": ["Due", "Due Soon", "Overdue", "Enrolled", "Complete"],
     "email_arrangement": {
         "name - title" : {"parent": "Employee Name",
                             "child": "Course Title",
@@ -21,9 +22,17 @@
                         "child": "Course ID",
                         "highlight_overdue": true}
     },
+    "comp_status": {
+        "Overdue - Overdue":  {"df1_list": ["Overdue"],
+                                "df2_list": ["Overdue"]},
+        " - Overdue": {"df1_list": ["Due", "Due Soon", "Enrolled", "Complete"],
+                        "df2_list": ["Overdue"]},
+        " - Complete": {"df1_list": ["Due", "Due Soon", "Overdue", "Enrolled"],
+                        "df2_list": ["Complete"]}
+    },
     "Defaults": {
         "group": "ID - name",
-        "filterby": ["OJT", "GEC", "ONL"],
+        "filterby": ["OJT", "GEC", "ONL", "SAF", "CSG", "CSO", "ODI", "SBC", "SBS"],
         "sort": "Emp No"
     }
 }

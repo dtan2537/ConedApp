@@ -1,21 +1,36 @@
 {% extends 'base.html' %}
 
+
 {% block nav %}
-<a class = "active" href="{{url_for('pages.manual')}}"">Sheet</a>
-<a href="{{url_for('pages.automatic')}}">Email</a>
-<a href="{{url_for('pages.compare')}}">Compare</a>
-<a href="{{url_for('pages._help')}}">Help</a>
+<a class = "active" href="{{url_for('manual')}}"">Sheet</a>
+<a href="{{url_for('automatic')}}">Email</a>
+<a href="{{url_for('compare')}}">Compare</a>
+<a href="{{url_for('supervisors')}}">Supervisors</a>
+<a href="{{url_for('_help')}}">Help</a>
 {% endblock nav %}
 
 {% block content %}
 <div class="left">
     <form action = "/manual" method = "post" enctype="multipart/form-data">
         {{form.csrf_token}}
-        <p>{{ form.file.label }}: {{name}}{{form.file()}}</p> 
-        <label class="file_btn" for={{form.file.id}}>Choose File</label>
-        <p>{{ form.filterby.label}} {{ form.filterby() }}</p> 
+        <p>{{ form.file.label }}</p> 
+        <p>{{name}}</p>
+        <p class="button">{{form.file()}}</p>
+        <label>Filter By</label>
+        <details>
+            <summary>Course</summary>
+            <p>{{ form.filterby() }}</p> 
+        </details>
+        <details>
+            <summary>Status</summary>
+            <p> {{ form.filter_status() }}</p> 
+        </details>        
+        <details>
+            <summary>Supervisor</summary>
+            <p> {{ form.filter_super() }}</p> 
+        </details>
         <p>{{ form.sort.label }} {{ form.sort() }}</p>
-        <p>{{ form.submit() }}</p>
+        <p class="button">{{ form.submit() }}</p>
         
     </form>
 
